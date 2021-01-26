@@ -7,9 +7,9 @@
 This project contains three scripts that imports and updates data from ***The COVID Tracking Project***. The scripts bring in JSON data and integrates that data into a MySQL or MariaDB database. 
 
 ## The Scripts and how to use them
-1. **us-covid-total.js**
-2. **states-covid-daily.js**
-3. **coronavirus.sql**
+- **us-covid-total.js**
+- **states-covid-daily.js**
+- **coronavirus.sql**
 
 ### Usage ###
 *Note: For these scripts to work, you must have either MySQL or MariaDB installed on your computer/server*
