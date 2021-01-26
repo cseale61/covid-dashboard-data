@@ -21,11 +21,11 @@ This project contains three scripts that imports and updates data from ***The CO
 *Note: For these scripts to work, you must have either MySQL or MariaDB installed on your computer/server*
 
 1. Import the coronavirus.sql script into MySQL or MariaDB. This will create the database with three tables:
-- covid_19_history  - contains data for each state for each day going back to 2020-01-13 (loaded by script)
-- us_covid_totals   - contains totals for entire US, and US territories, as a whole going back to 2020-03-04 (loaded by script)
-- states            - A reference table containing the abbreviation and full name of each state (preloaded)
+- **covid_19_history**  - contains data for each state for each day going back to 2020-01-13 (loaded by script)
+- **us_covid_totals**   - contains totals for entire US, and US territories, as a whole going back to 2020-03-04 (loaded by script)
+- **states**            - A reference table containing the abbreviation and full name of each state (preloaded)
 
-2. Open a terminal window and navigate to the directory where the scripts have been installed. To do an initial load of the database, you must use the 'full' option at the command line: 
+2. Open a terminal window and navigate to the directory where the scripts have been installed. To do an initial load of the database, you must use the **'full'** option at the command line: 
 - `node states-covid-daily full`
 - `node us-covid-total.js full`
 
