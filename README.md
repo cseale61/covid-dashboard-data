@@ -2,8 +2,14 @@
 ## Installation
 1. Clone project onto your server or local computer
 2. Navigate into the directory that has been been created
-3. run `npm install`
-
+3. Run `npm install`
+4. Create a .env file with the following information:  
+  
+   DB_HOST=localhost  
+   DB_USER=your_username  
+   DB_PASS=your_password  
+   DATABASE=coronavirus  
+  
 This project contains three scripts that imports and updates data from ***The COVID Tracking Project***. The scripts bring in JSON data and integrates that data into a MySQL or MariaDB database. 
 
 ## The Scripts and how to use them
