@@ -26,7 +26,7 @@ This project contains three scripts that imports and updates data from ***The CO
 - **states**            - A reference table containing the abbreviation and full name of each state (preloaded)
 
 2. Open a terminal window and navigate to the directory where the scripts have been installed. To do an initial load of the database, you must use the **'full'** option at the command line: 
-- `node states-covid-daily full`
+- `node states-covid-daily.js full`
 - `node us-covid-total.js full`
 
 3. Daily updates can be done by **NOT** using the **full** option. Running the scripts with no options will only bring in the last update available from The COVID Tracking Project API. This will dramatically reduce your bandwidth and increase your update speed. If you are updating your data using crontab, it is recommended that you run your updates after 8:00 PM Eastern Time. 
