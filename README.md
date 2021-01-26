@@ -1,7 +1,7 @@
 # covid-dashboard-data
 ## Installation
 1. Clone project onto your server or local computer
-2. Navigate into directory that has been been created
+2. Navigate into the directory that has been been created
 3. run `npm install`
 
 This project contains three scripts that imports and updates data from ***The COVID Tracking Project***. The scripts bring in JSON data and integrates that data into a MySQL or MariaDB database. 
@@ -24,3 +24,48 @@ This project contains three scripts that imports and updates data from ***The CO
 - `node us-covid-total.js full`
 
 3. Daily updates can be done by **NOT** using the **full** option. Running the scripts with no options will only bring in the last update available from The COVID Tracking Project API. This will dramatically reduce your bandwidth and increase your update speed. If you are updating your data using crontab, it is recommended that you run your updates after 8:00 PM Eastern Time. 
+
+## Available data
+
+### Table: covid_19_history
+Daily information for each state, Washington DC, and Puerto Rico
+| Field | Data Tyoe |
+| :---        |    :---   |
+| id      | int(11) - auto_increment |
+| state   | char(2) |
+| date | varchar(10)|
+| month_year | char(8)|
+| total_tests | int(11) |
+| negative_results | int(11) |
+| positive_results | int(11) |
+| positive_increase | int(11) |
+| hospitalized  | int(11) |
+| icu | int(11) |
+| deaths | int(11) |
+| death_increase | int(11) |
+
+
+### Table: us_covid_totals
+Daily information for the United States as a whole. Includes Washington DC, and ALL U.S. territories.
+| Field | Data Tyoe |
+| :---        |    :---   |
+| id | int(11) - auto_increment | 
+| date | varchar(10)| 
+| month_year | char(8)| 
+| total_tests | int(11)| 
+| negative_results | int(11)| 
+| positive_results | int(11)| 
+| positive_increase | int(11)| 
+| hospitalized | int(11)| 
+| icu | int(11)| 
+| deaths | int(11)| 
+| death_increase | int(11)| 
+
+
+### Table: states
+This is a reference table for the scripts
+| Field | Data Tyoe |
+| :---        |    :---   |
+| id | int(11) - auto_increment | 
+| state_id | char(2) | 
+| state_name | varchar(60) |
