@@ -69,3 +69,6 @@ This is a reference table for the scripts
 | id | int(11) - auto_increment | 
 | state_id | char(2) | 
 | state_name | varchar(60) |
+
+## Modifications
+If you wish to add data fields to this project, you can find all available API data at [The COVID Tracking Project API](https://covidtracking.com/data/api)
