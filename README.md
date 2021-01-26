@@ -1,4 +1,8 @@
 # covid-dashboard-data
+## Installation
+1. Clone project onto your server or local computer
+2. Navigate into directory that has been been created
+3. run `npm install`
 
 This project contains three scripts that imports and updates data from ***The COVID Tracking Project***. The scripts bring in JSON data and integrates that data into a MySQL or MariaDB database. 
 
