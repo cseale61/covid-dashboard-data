@@ -33,7 +33,7 @@ This project contains three scripts that imports and updates data from ***The CO
 
 ## Available data
 
-### Table: covid_19_history
+### Table: covid19_history_by_state
 Daily information for each state, Washington DC, and Puerto Rico
 | Field | Data Tyoe |
 | :---        |    :---   |
@@ -41,14 +41,18 @@ Daily information for each state, Washington DC, and Puerto Rico
 | state   | char(2) |
 | date | varchar(10)|
 | month_year | char(8)|
-| total_tests | int(11) |
-| negative_results | int(11) |
-| positive_results | int(11) |
-| positive_increase | int(11) |
-| hospitalized  | int(11) |
-| icu | int(11) |
-| deaths | int(11) |
-| death_increase | int(11) |
+| totalTestResults | int(11) |
+| positive | int(11) |
+| positiveIncrease | int(11) |
+| hospitalizedCurrently | int(11) |
+| hospitalizedIncrease  | int(11) |
+| hospitalizedCumulative | int(11) |
+| inIcuCurrently | int(11) |
+| inIcuCumulative | int(11) |
+| onVentilatorCurrently | int(11) |
+| onVentilatorCumulative | int(11) |
+| death | int(11) |
+| deathIncrease | int(11) |
 
 
 ### Table: us_covid_totals
@@ -58,14 +62,18 @@ Daily information for the United States as a whole. Includes Washington DC, and 
 | id | int(11) - auto_increment | 
 | date | varchar(10)| 
 | month_year | char(8)| 
-| total_tests | int(11)| 
-| negative_results | int(11)| 
-| positive_results | int(11)| 
-| positive_increase | int(11)| 
-| hospitalized | int(11)| 
-| icu | int(11)| 
-| deaths | int(11)| 
-| death_increase | int(11)| 
+| totalTestResults | int(11)| 
+| positive | int(11)| 
+| positiveIncrease | int(11)| 
+| hospitalizedCurrently | int(11)| 
+| hospitalizedIncrease | int(11)| 
+| hospitalizedCumulative | int(11)| 
+| inIcuCurrently | int(11)| 
+| inIcuCumulative | int(11)| 
+| onVentilatorCurrently | int(11)| 
+| onVentilatorCumulative | int(11)| 
+| death | int(11)| 
+| deathIncrease | int(11)| 
 
 
 ### Table: states
