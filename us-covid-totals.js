@@ -70,11 +70,15 @@ async function loadTotals(cdata) {
             date,
             month,
             cdata[i].totalTestResults,
-            cdata[i].negative,
             cdata[i].positive,
             cdata[i].positiveIncrease,
             cdata[i].hospitalizedCurrently,
+            cdata[i].hospitalizedIncrease,
+            cdata[i].hospitalizedCumulative,
             cdata[i].inIcuCurrently,
+            cdata[i].inIcuCumulative,
+            cdata[i].onVentilatorCurrently,
+            cdata[i].onVentilatorCumulative,
             cdata[i].death,
             cdata[i].deathIncrease
         ];
@@ -83,14 +87,18 @@ async function loadTotals(cdata) {
     let sql = "INSERT INTO us_covid_totals ( \
                     date, \
                     month_year, \
-                    total_tests, \
-                    negative_results, \
-                    positive_results, \
-                    positive_increase, \
-                    hospitalized, \
-                    icu, \
-                    deaths, \
-                    death_increase \
+                    totalTestResults, \
+                    positive, \
+                    positiveIncrease, \
+                    hospitalizedCurrently, \
+                    hospitalizedIncrease, \
+                    hospitalizedCumulative, \
+                    inIcuCurrently, \
+                    inIcuCumulative, \
+                    onVentilatorCurrently, \
+                    onVentilatorCumulative, \
+                    death, \
+                    deathIncrease \
                ) VALUES ?";
 
     try {

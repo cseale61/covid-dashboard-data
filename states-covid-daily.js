@@ -137,29 +137,37 @@ async function updateCovidData(cdata) {
             date,
             month,
             cdata[i].totalTestResults,
-            cdata[i].negative,
             cdata[i].positive,
             cdata[i].positiveIncrease,
             cdata[i].hospitalizedCurrently,
+            cdata[i].hospitalizedIncrease,
+            cdata[i].hospitalizedCumulative,
             cdata[i].inIcuCurrently,
+            cdata[i].inIcuCumulative,
+            cdata[i].onVentilatorCurrently,
+            cdata[i].onVentilatorCumulative,
             cdata[i].death,
-            cdata[i].deathIncrease
+            cdata[i].deathIncrease,
         ];
 
     }
 
-    let sql = "INSERT INTO covid_19_history ( \
+    let sql = "INSERT INTO covid19_history_by_state ( \
                     state, \
                     date, \
                     month_year, \
-                    total_tests, \
-                    negative_results, \
-                    positive_results, \
-                    positive_increase, \
-                    hospitalized, \
-                    icu, \
-                    deaths, \
-                    death_increase \
+                    totalTestResults, \
+                    positive, \
+                    positiveIncrease, \
+                    hospitalizedCurrently, \
+                    hospitalizedIncrease, \
+                    hospitalizedCumulative, \
+                    inIcuCurrently, \
+                    inIcuCumulative, \
+                    onVentilatorCurrently, \
+                    onVentilatorCumulative, \
+                    death, \
+                    deathIncrease \
                ) VALUES ?";
 
     try {

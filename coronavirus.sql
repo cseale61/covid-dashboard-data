@@ -3,19 +3,23 @@ DROP DATABASE IF EXISTS `coronavirus`;
 CREATE DATABASE `coronavirus`;
 USE `coronavirus`;
 
-CREATE TABLE `covid_19_history` (
+CREATE TABLE `covid19_history_by_state` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `state` char(2) DEFAULT NULL,
   `date` varchar(10) DEFAULT NULL,
   `month_year` char(8) DEFAULT NULL,
-  `total_tests` int(11) DEFAULT NULL,
-  `negative_results` int(11) DEFAULT NULL,
-  `positive_results` int(11) DEFAULT NULL,
-  `positive_increase` int(11) DEFAULT NULL,
-  `hospitalized` int(11) DEFAULT NULL,
-  `icu` int(11) DEFAULT NULL,
-  `deaths` int(11) DEFAULT NULL,
-  `death_increase` int(11) DEFAULT NULL,
+  `totalTestResults` int(11) DEFAULT NULL,
+  `positive` int(11) DEFAULT NULL,
+  `positiveIncrease` int(11) DEFAULT NULL,
+  `hospitalizedCurrently` int(11) DEFAULT NULL,
+  `hospitalizedIncrease` int(11) DEFAULT NULL,
+  `hospitalizedCumulative` int(11) DEFAULT NULL,
+  `inIcuCurrently` int(11) DEFAULT NULL,
+  `inIcuCumulative` int(11) DEFAULT NULL,
+  `onVentilatorCurrently` int(11) DEFAULT NULL,
+  `onVentilatorCumulative` int(11) DEFAULT NULL,
+  `death` int(11) DEFAULT NULL,
+  `deathIncrease` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
@@ -45,13 +49,17 @@ CREATE TABLE `us_covid_totals` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `date` varchar(10) DEFAULT NULL,
   `month_year` char(8) DEFAULT NULL,
-  `total_tests` int(11) DEFAULT NULL,
-  `negative_results` int(11) DEFAULT NULL,
-  `positive_results` int(11) DEFAULT NULL,
-  `positive_increase` int(11) DEFAULT NULL,
-  `hospitalized` int(11) DEFAULT NULL,
-  `icu` int(11) DEFAULT NULL,
-  `deaths` int(11) DEFAULT NULL,
-  `death_increase` int(11) DEFAULT NULL,
+  `totalTestResults` int(11) DEFAULT NULL,
+  `positive` int(11) DEFAULT NULL,
+  `positiveIncrease` int(11) DEFAULT NULL,
+  `hospitalizedCurrently` int(11) DEFAULT NULL,
+  `hospitalizedIncrease` int(11) DEFAULT NULL,
+  `hospitalizedCumulative` int(11) DEFAULT NULL,
+  `inIcuCurrently` int(11) DEFAULT NULL,
+  `inIcuCumulative` int(11) DEFAULT NULL,
+  `onVentilatorCurrently` int(11) DEFAULT NULL,
+  `onVentilatorCumulative` int(11) DEFAULT NULL,
+  `death` int(11) DEFAULT NULL,
+  `deathIncrease` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4839 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
