@@ -183,7 +183,7 @@ async function updateCovidData(cdata) {
 
 async function clearTable() {
 
-    let sql = 'DELETE FROM covid_19_history';
+    let sql = 'DELETE FROM covid19_history_by_state';
     try {
 
         let rows = await query(sql);
@@ -197,7 +197,7 @@ async function clearTable() {
 
 async function checkLastUpdate() {
 
-    let sql = 'SELECT date FROM covid_19_history ORDER BY date DESC LIMIT 1';
+    let sql = 'SELECT date FROM covid19_history_by_state ORDER BY date DESC LIMIT 1';
     try {
 
         let lastUpdate = await query(sql);
